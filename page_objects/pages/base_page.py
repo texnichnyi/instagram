@@ -57,8 +57,8 @@ class BasePage:
     def scroll_to_element(self, locator: tuple, max_scrolls: int = 10, scroll_amount: int = 800) -> bool:
         scroll_count = 0
         while scroll_count < max_scrolls:
-            elements = self.driver.find_element(locator)
-            if elements:
+            element = self.driver.find_element(locator)
+            if element:
                 return True
 
             self.driver.execute_script(f"window.scrollBy(0, {scroll_amount});")
