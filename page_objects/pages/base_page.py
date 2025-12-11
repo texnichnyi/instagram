@@ -43,7 +43,7 @@ class BasePage:
         return self._wait_for_element(locator, expected_conditions.presence_of_element_located)
 
     def find_elements(self, locator: tuple):
-        self._wait_for_element(locator , expected_conditions.presence_of_all_elements_located)
+        return self._wait_for_element(locator, expected_conditions.presence_of_all_elements_located)
 
     def click_element(self, locator: tuple):
         element = self._wait_for_element(locator, expected_conditions.element_to_be_clickable)
