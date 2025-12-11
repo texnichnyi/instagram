@@ -1,13 +1,13 @@
 from page_objects.components.sign_up_components.sign_up_form import SignUpForm
-from page_objects.pages.home_page.home_page import HomePage
+from page_objects.pages.base_page import BasePage
 
 
-class SignUpPage:
+class SignUpPage(BasePage):
     """
     Cторінка Sign Up
     """
     def __init__(self, driver):
-        self.driver = driver
+        super().__init__(driver)
         self.sign_up_form = SignUpForm(self.driver)
 
     def sign_up_new_user(self, email_or_phone, full_name, username, password):
