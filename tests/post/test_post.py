@@ -27,8 +27,7 @@ def test_scroll_to_posts_bottom(login_page):
         credentials['username'],
         credentials['password']
     )
-    target_locator = home_page.bottom_panel.HOME_BUTTON
-    is_bottom_reached = home_page.scroll_to_element(target_locator)
+    is_bottom_reached = home_page.scroll_feed_to_bottom()
 
     assert is_bottom_reached, "Ви недоскролили до низу сторінки."
 
