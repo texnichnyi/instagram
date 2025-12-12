@@ -1,9 +1,8 @@
 from selenium.webdriver.common.by import By
+from page_objects.pages.base_page import BasePage
 
-from page_objects.pages.base_auth_page import BaseAuthPage
 
-
-class BottomPanel(BaseAuthPage):
+class BottomPanel(BasePage):
     """
     Нижня панель, доступна всюди для залогованих користувачів
     """
