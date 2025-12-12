@@ -34,5 +34,5 @@ class HomePage(BaseAuthPage):
             raise NoSuchElementException(f"Пост автора '{post_author}' не знайдено.")
 
     def scroll_feed_to_bottom(self) -> bool:
-        target_locator = self.bottom_panel.HOME_BUTTON
+        target_locator = self.footer.LINK_META
         return self.scroll_to_element(target_locator)
