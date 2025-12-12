@@ -13,15 +13,6 @@ class BasePage:
         self._footer = None
         self.wait_for_loading()
 
-    @property
-    def footer(self):
-        # Ініціалізувати футер, як тільки стане необхідно
-        from page_objects.components.base_components.footer import Footer
-
-        if self._footer is None:
-            self._footer = Footer(self.driver)
-        return self._footer
-
     # Очікування
     def wait_for_loading(self, element_locator: tuple = None):
         if element_locator:

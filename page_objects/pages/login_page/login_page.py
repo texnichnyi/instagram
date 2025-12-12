@@ -1,9 +1,9 @@
 from page_objects.components.login_components.login_form import LoginForm
-from page_objects.pages.base_page import BasePage
+from page_objects.pages.base_unathorized_page import BaseUnathorizedPage
 from page_objects.pages.home_page.home_page import HomePage
 
 
-class LoginPage(BasePage):
+class LoginPage(BaseUnathorizedPage):
     """
     Cторінка Login
     """

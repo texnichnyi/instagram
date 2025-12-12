@@ -12,6 +12,7 @@ class HomePage(BaseAuthPage):
     SEARCH_INPUT = (By.CSS_SELECTOR, "input[placeholder='Search']")
     NOTIFICATION_BUTTON = (By.CSS_SELECTOR, "a[href='/notifications/']")
     ALL_POSTS = (By.CSS_SELECTOR, "article")
+    BOTTOM_IMG = (By.XPATH, "//img[contains(@src, 'illo-confirm-refresh')]")
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -34,5 +35,5 @@ class HomePage(BaseAuthPage):
             raise NoSuchElementException(f"Пост автора '{post_author}' не знайдено.")
 
     def scroll_feed_to_bottom(self) -> bool:
-        target_locator = self.footer.LINK_META
+        target_locator = self.BOTTOM_IMG
         return self.scroll_to_element(target_locator)

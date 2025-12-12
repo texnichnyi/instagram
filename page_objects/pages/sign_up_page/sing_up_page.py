@@ -1,8 +1,8 @@
 from page_objects.components.sign_up_components.sign_up_form import SignUpForm
-from page_objects.pages.base_page import BasePage
+from page_objects.pages.base_unathorized_page import BaseUnathorizedPage
 
 
-class SignUpPage(BasePage):
+class SignUpPage(BaseUnathorizedPage):
     """
     Cторінка Sign Up
     """
