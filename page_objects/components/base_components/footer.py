@@ -24,7 +24,6 @@ class Footer(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-        self.wait_for_loading(element_locator=self.LINK_META)
 
     # Методи для роботи з елементами
     def click_privacy_link(self):
